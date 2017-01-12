@@ -1,7 +1,6 @@
 import copy
 import logging
 from werkzeug.utils import cached_property
-from piecrust.configuration import ConfigurationError
 from piecrust.page import Page
 from piecrust.data.assetor import Assetor
 
@@ -127,7 +126,9 @@ class PageSource(object):
 
     def buildDataProvider(self, page, override):
         if not self._provider_type:
-            self._provider_type = self.app.getDataProviderClass(self.data_type)
+            from piecrust.data.provider import get_data_provider_class
+            self._provider_type = get_data_provider_class(self.app,
+                                                          self.data_type)
         return self._provider_type(self, page, override)
     
     def finalizeConfig(self, page):

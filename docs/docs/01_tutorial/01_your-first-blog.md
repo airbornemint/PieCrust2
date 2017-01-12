@@ -226,7 +226,7 @@ example, say you don't like the default URL format for posts. That can be
 adjusted with the `site/post_url` setting. By default, it is:
 
     site:
-        post_url: "%year%/%month%/%day%/%slug%
+        post_url: "%year%/%month%/%day%/%slug%"
 
 The post URL format is defined using some keywords surrounded by percent signs,
 as you can see above. The `%year%`, `%month%` and `%day%` keywords should be
@@ -269,7 +269,7 @@ stylesheets and using PieCrust's built-in asset pipeline.
 [yaml]: https://en.wikipedia.org/wiki/YAML
 [slug]: http://en.wikipedia.org/wiki/Semantic_URL#Slug
 [pageconfref]: {{pcurl('docs/reference/page-config')}}
-[siteconfref]: {{pcurl('docs/reference/site-config')}}
+[siteconfref]: {{pcurl('docs/reference/website-config')}}
 [part2]: {{pcurl('docs/tutorial/making-things-pretty')}}
 [routes]: {{docurl('content-model/routes')}}
 [tpl]: {{docurl('content/templating')}}
