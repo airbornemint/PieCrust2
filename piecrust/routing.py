@@ -64,7 +64,7 @@ class Route(object):
         else:
             self.supported_params = self.generator.getSupportedRouteParameters()
 
-        self.pretty_urls = app.config.get('site/pretty_urls')
+        self.pretty_urls = cfg.get('pretty_urls', app.config.get('site/pretty_urls'))
         self.trailing_slash = app.config.get('site/trailing_slash')
         self.show_debug_info = app.config.get('site/show_debug_info')
         self.pagination_suffix_format = app.config.get(
