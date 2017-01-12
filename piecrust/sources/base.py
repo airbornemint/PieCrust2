@@ -133,6 +133,6 @@ class PageSource(object):
     def finalizeConfig(self, page):
         pass
 
-    def buildPageAssetor(self, page, uri):
+    def buildAssetor(self, page, uri):
         return Assetor(page, uri)
 
